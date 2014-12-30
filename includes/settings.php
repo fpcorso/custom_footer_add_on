@@ -33,7 +33,7 @@ class MlwCustomFooter_Settings extends ClientDash_Settings_API {
 	 * Feel free to modify or add to this example, or even remove it.
 	 */
 	private static $settings = array(
-		'text' => array(
+		'textarea' => array(
 			'name' => 'Custom Text For Left Side Of Footer',
 			'ID' => 'cf_left_footer'
 		),
@@ -97,10 +97,6 @@ class MlwCustomFooter_Settings extends ClientDash_Settings_API {
 		foreach ( self::$settings as $setting ) {
 			self::register_field( 'cd_options_' . self::$ID, $this->_settings_ID, $setting['ID'] );
 		}
-
-		// Custom field example
-		self::register_field( 'cd_options_' . self::$ID, $this->_settings_ID, 'cf_left_footer' );
-		self::register_field( 'cd_options_' . self::$ID, $this->_settings_ID, 'cf_right_footer' );
 	}
 
 	/**
@@ -159,9 +155,6 @@ class MlwCustomFooter_Settings extends ClientDash_Settings_API {
 
 			echo call_user_func_array( __CLASS__ . "::{$setting_type}_field", $args );
 		}
-
-		// Example setting using the API
-		echo self::text_field( $this->_settings_ID, 'custom_text_field', 'Custom Text Field' );
 
 		// Closes the form table
 		echo self::close_form_table();
