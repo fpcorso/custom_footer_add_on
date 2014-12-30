@@ -137,22 +137,31 @@ if ( ! function_exists( 'cd_custom_footer' ) ) {
 
 				// Add our styles conditionally
 				add_action( 'admin_enqueue_scripts', array( $this, 'add_styles' ) );
-
-				// Add our new content section
-				$this->add_content_section(
-					array(
-						'name'     => self::$section_name,
-						'tab'      => self::$tab,
-						'page'     => self::$page,
-						'callback' => array( $this, 'section_output' )
-					)
-				);
-
+				
 				// Set the plugin path
 				$this->_path = plugin_dir_path( __FILE__ );
 
 				// Set the plugin url
 				$this->_url = plugins_url( '', __FILE__ );
+				
+				add_filter('update_footer', array( $this, 'right_admin_footer_text_output'), 11);
+				add_filter('admin_footer_text', array( $this, 'left_admin_footer_text_output'));
+			}
+			
+			function left_admin_footer_text_output($text) {
+				if (get_option('cd_custom_setting_custom_footer_settings_cf_left_footer') != false)
+				{
+					$text = get_option('cd_custom_setting_custom_footer_settings_cf_left_footer');
+				}
+				return $text;
+			}
+			
+			function right_admin_footer_text_output($text) {
+				if (get_option('cd_custom_setting_custom_footer_settings_cf_right_footer') != false)
+				{
+					$text = get_option('cd_custom_setting_custom_footer_settings_cf_right_footer');
+				}
+				return $text;
 			}
 
 			/**
@@ -188,19 +197,6 @@ if ( ! function_exists( 'cd_custom_footer' ) ) {
 				if ( self::is_cd_page( $page_ID, $tab_ID ) || self::is_cd_page( 'cd_settings', $settings_tab_ID ) ) {
 					wp_enqueue_style( self::$ID . '-style' );
 				}
-			}
-
-			/**
-			 * Our section output.
-			 *
-			 * This is where all of the content section content goes! Add anything you like to this function.
-			 *
-			 * Feel free to modify or add to this example.
-			 */
-			public function section_output() {
-
-				// CHANGE THIS
-				echo 'This is where your new content section\'s content goes.';
 			}
 		}
 
