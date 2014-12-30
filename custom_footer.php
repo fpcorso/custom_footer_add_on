@@ -1,11 +1,21 @@
 <?php
-/*
-Plugin Name: Client Dash Extension Boilerplate
-Description: Starting point for making an add-on for Client Dash.
-Version: 0.2.0
-Author: Kyle Maurer
-Author URI: http://realbigmarketing.com/staff/kyle
-*/
+/**
+ * Plugin Name: Custom Footer Client Dash Add-On
+ * Plugin URI: http://mylocalwebstop.com
+ * Description:
+ * Author: Frank Corso
+ * Author URI: http://mylocalwebstop.com
+ * Version: 0.1.0
+ *
+ * Disclaimer of Warranties
+ * The plugin is provided "as is". My Local Webstop and its suppliers and licensors hereby disclaim all warranties of any kind, 
+ * express or implied, including, without limitation, the warranties of merchantability, fitness for a particular purpose and non-infringement. 
+ * Neither My Local Webstop nor its suppliers and licensors, makes any warranty that the plugin will be error free or that access thereto will be continuous or uninterrupted.
+ * You understand that you install, operate, and uninstall the plugin at your own discretion and risk.
+ * 
+ * @author Frank Corso
+ * @version 0.1.0
+ */
 
 // FIXME Style not loading
 
