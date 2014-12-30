@@ -17,8 +17,6 @@
  * @version 0.1.0
  */
 
-// FIXME Style not loading
-
 // Change me! Change me to the function just below
 if ( ! function_exists( 'cd_custom_footer' ) ) {
 
@@ -144,11 +142,21 @@ if ( ! function_exists( 'cd_custom_footer' ) ) {
 				// Set the plugin url
 				$this->_url = plugins_url( '', __FILE__ )."/";
 				
+				//Set the filters up for the footer text
 				add_filter('update_footer', array( $this, 'right_admin_footer_text_output'), 11);
 				add_filter('admin_footer_text', array( $this, 'left_admin_footer_text_output'));
 			}
 			
-			function left_admin_footer_text_output($text) {
+			/**
+			 * Left Footer Text Function
+			 * 
+			 * This replaces the text on the left footer
+			 * 
+			 * @since 0.1.0
+			 * @access public
+			 * @return string The text to be used for the left footer
+			 */
+			public function left_admin_footer_text_output($text) {
 				if (get_option('cd_custom_setting_custom_footer_settings_cf_left_footer') != false)
 				{
 					$text = get_option('cd_custom_setting_custom_footer_settings_cf_left_footer');
@@ -156,7 +164,16 @@ if ( ! function_exists( 'cd_custom_footer' ) ) {
 				return $text;
 			}
 			
-			function right_admin_footer_text_output($text) {
+			/**
+			 * Right Footer Text Function
+			 * 
+			 * This replaces the text on the right footer
+			 * 
+			 * @since 0.1.0
+			 * @access public
+			 * @return string The text to be used for the right footer
+			 */
+			public function right_admin_footer_text_output($text) {
 				if (get_option('cd_custom_setting_custom_footer_settings_cf_right_footer') != false)
 				{
 					$text = get_option('cd_custom_setting_custom_footer_settings_cf_right_footer');
