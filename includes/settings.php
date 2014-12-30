@@ -34,11 +34,11 @@ class MlwCustomFooter_Settings extends ClientDash_Settings_API {
 	 */
 	private static $settings = array(
 		'textarea' => array(
-			'name' => 'Custom Text For Left Side Of Footer',
+			'name' => 'Text For Left Side Of Footer',
 			'ID' => 'cf_left_footer'
 		),
 		'text' => array(
-			'name' => 'Custom Text For Right Side Of Footer',
+			'name' => 'Text For Right Side Of Footer',
 			'ID' => 'cf_right_footer'
 		)
 	);
