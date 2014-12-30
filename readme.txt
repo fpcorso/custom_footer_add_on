@@ -1,7 +1,7 @@
-=== Custom Footer Client Dash Add-On ===
+=== Client Dash Custom Footer Add-On ===
 Contributors: fpcorso
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RTGYAETX36ZQJ
-Tags: footer, admin, text, version
+Tags: footer, admin, text, version, client dash
 Requires at least: 3.8.1
 Tested up to: 4.1
 Stable tag: 0.1.0
@@ -16,7 +16,7 @@ Allows the admin to customize the "Thank you for creating with WordPress." foote
 = Requires Client Dash =
 
 = Make Suggestions Or Contribute =
-Custom Footer Client Dash Add-On is on [GitHub](https://github.com/fpcorso/custom_footer_add_on/)!
+Client Dash Custom Footer Add-On is on [GitHub](https://github.com/fpcorso/custom_footer_add_on/)!
 
 == Installation ==
 
@@ -26,7 +26,7 @@ We now offer an installation service to assist you in this process. We will inst
 **Or**
 
 * Navigate to Add New Plugin page within your WordPress
-* Search for Tips Shortcode
+* Search for Client Dash Custom Footer Add-On
 * Click Install Now link on the plugin and follow the prompts
 * Activate the plugin through the 'Plugins' menu in WordPress
 
