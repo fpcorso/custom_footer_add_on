@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Client Dash Custom Footer Add-On
+ * Plugin Name: Client Dash Custom Footer Addon
  * Plugin URI: http://mylocalwebstop.com
  * Description: Enables the admin to customize the footer text
  * Author: Frank Corso
