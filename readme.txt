@@ -1,4 +1,4 @@
-=== Client Dash Custom Footer Add-On ===
+=== Client Dash Custom Footer Addon ===
 Contributors: fpcorso
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RTGYAETX36ZQJ
 Tags: footer, admin, text, version, client dash
