@@ -51,7 +51,7 @@ if ( ! function_exists( 'cd_custom_footer' ) ) {
 		 * The main class for the extension. Be sure to rename this class something that is unique to your extension.
 		 * Duplicate classes will break PHP.
 		 */
-		class MyCDExtension extends ClientDash {
+		class MlwCustomFooter extends ClientDash {
 
 			/**
 			 * Your unique ID.
@@ -80,7 +80,7 @@ if ( ! function_exists( 'cd_custom_footer' ) ) {
 			 *
 			 * Feel free to modify this example.
 			 */
-			private static $tab = 'custom_footer';
+			private static $tab = 'Custom Footer';
 
 			/**
 			 * This is the settings tab name.
@@ -89,7 +89,7 @@ if ( ! function_exists( 'cd_custom_footer' ) ) {
 			 *
 			 * Feel free to modify this example.
 			 */
-			public static $settings_tab = 'custom_footer';
+			public static $settings_tab = 'Custom Footer';
 
 			/**
 			 * This is the section name of your boilerplate.
@@ -99,7 +99,7 @@ if ( ! function_exists( 'cd_custom_footer' ) ) {
 			 *
 			 * Feel free to modify this example.
 			 */
-			private static $section_name = 'Boilerplate Content';
+			private static $section_name = 'Custom Footer';
 
 			/**
 			 * This is the current version of your plugin. Keep it up to do date!
@@ -205,19 +205,11 @@ if ( ! function_exists( 'cd_custom_footer' ) ) {
 		}
 
 		// Instantiate the class
-		$MyCDExtension = new MyCDExtension();
+		$MlwCustomFooter = new MlwCustomFooter();
 
 		// Include the file for your plugin settings. Simply remove or comment this line to disable the settings
 		// Remove if you don't want settings
-		include_once( "{$MyCDExtension->_path}inc/settings.php" );
-
-		// Include the file for your plugin widget. Simply remove or comment this line to disable the widget
-		// Remove if you don't want widgets
-		include_once( "{$MyCDExtension->_path}inc/widgets.php" );
-
-		// Include the file for your plugin menus. Simply remove or comment this line to disable the widget
-		// Remove if you don't want menus
-		include_once( "{$MyCDExtension->_path}inc/menus.php" );
+		include_once( "{$MlwCustomFooter->_path}includes/settings.php" );
 	}
 
 	// Change me! Change me to the name of the function at the top.
@@ -231,7 +223,7 @@ if ( ! function_exists( '_cd_custom_footer_notice' ) ) {
 	 * Change me! Change my name to something unique (and also change the add_action at the top of the file). And change
 	 * the name in function_exists().
 	 */
-	function _cd_boilerplate_notice() {
+	function _cd_custom_footer_notice() {
 
 		?>
 		<div class="error">
