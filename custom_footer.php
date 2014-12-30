@@ -10,7 +10,7 @@ Author URI: http://realbigmarketing.com/staff/kyle
 // FIXME Style not loading
 
 // Change me! Change me to the function just below
-if ( ! function_exists( 'cd_boilerplate' ) ) {
+if ( ! function_exists( 'cd_custom_footer' ) ) {
 
 	/**
 	 * The function to launch our plugin.
@@ -26,11 +26,11 @@ if ( ! function_exists( 'cd_boilerplate' ) ) {
 	 *
 	 * Please and thank you.
 	 */
-	function cd_boilerplate() {
+	function cd_custom_footer() {
 		if ( ! class_exists( 'ClientDash' ) ) {
 
 			// Change me! Change me to the name of the notice function at the bottom
-			add_action( 'admin_notices', '_cd_boilerplate_notice' );
+			add_action( 'admin_notices', '_cd_custom_footer_notice' );
 
 			return;
 		}
@@ -51,7 +51,7 @@ if ( ! function_exists( 'cd_boilerplate' ) ) {
 			 *
 			 * Feel free to modify this example.
 			 */
-			public static $ID = 'boilerplate';
+			public static $ID = 'custom_footer';
 
 			/**
 			 * This is the page that you want your new tab to reside in. This page must be one of the four core Client Dash
@@ -59,7 +59,7 @@ if ( ! function_exists( 'cd_boilerplate' ) ) {
 			 *
 			 * Feel free to modify this example.
 			 */
-			private static $page = 'Account';
+			private static $page = 'Webmaster';
 
 			/**
 			 * Your tab name.
@@ -70,7 +70,7 @@ if ( ! function_exists( 'cd_boilerplate' ) ) {
 			 *
 			 * Feel free to modify this example.
 			 */
-			private static $tab = 'Boilerplate';
+			private static $tab = 'custom_footer';
 
 			/**
 			 * This is the settings tab name.
@@ -79,7 +79,7 @@ if ( ! function_exists( 'cd_boilerplate' ) ) {
 			 *
 			 * Feel free to modify this example.
 			 */
-			public static $settings_tab = 'Boilerplate';
+			public static $settings_tab = 'custom_footer';
 
 			/**
 			 * This is the section name of your boilerplate.
@@ -94,7 +94,7 @@ if ( ! function_exists( 'cd_boilerplate' ) ) {
 			/**
 			 * This is the current version of your plugin. Keep it up to do date!
 			 */
-			public static $extension_version = '0.1.3';
+			public static $extension_version = '0.1.0';
 
 			/**
 			 * This is the path to the plugin.
@@ -211,10 +211,10 @@ if ( ! function_exists( 'cd_boilerplate' ) ) {
 	}
 
 	// Change me! Change me to the name of the function at the top.
-	add_action( 'plugins_loaded', 'cd_boilerplate' );
+	add_action( 'plugins_loaded', 'cd_custom_footer' );
 }
 
-if ( ! function_exists( '_cd_boilerplate_notice' ) ) {
+if ( ! function_exists( '_cd_custom_footer_notice' ) ) {
 	/**
 	 * Notices for if CD is not active.
 	 *
