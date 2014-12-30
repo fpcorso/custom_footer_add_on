@@ -142,7 +142,7 @@ if ( ! function_exists( 'cd_custom_footer' ) ) {
 				$this->_path = plugin_dir_path( __FILE__ );
 
 				// Set the plugin url
-				$this->_url = plugins_url( '', __FILE__ );
+				$this->_url = plugins_url( '', __FILE__ )."/";
 				
 				add_filter('update_footer', array( $this, 'right_admin_footer_text_output'), 11);
 				add_filter('admin_footer_text', array( $this, 'left_admin_footer_text_output'));
