@@ -1,12 +1,10 @@
 <?php
 
 /**
- * Class MyCDExtension_Settings
- *
- * If you do NOT want to use custom widgets, free to delete this file and the
- * "include_once( "{$MyCDExtension::$_path}inc/settings.php" );" line in the main boilerplate file.
+ * Class MlwCustomFooter_Settings
+ * 
  */
-class MyCDExtension_Settings extends ClientDash_Settings_API {
+class MlwCustomFooter_Settings extends ClientDash_Settings_API {
 
 	/**
 	 * This is the section name of your boilerplate settings.
@@ -16,7 +14,7 @@ class MyCDExtension_Settings extends ClientDash_Settings_API {
 	 *
 	 * Feel free to modify this example.
 	 */
-	private static $section_name = 'Boilerplate Settings';
+	private static $section_name = 'Custom Footer Settings';
 
 	/**
 	 * Your extension's main ID, as set in the main plugin class.
@@ -36,32 +34,13 @@ class MyCDExtension_Settings extends ClientDash_Settings_API {
 	 */
 	private static $settings = array(
 		'text' => array(
-			'name' => 'Text Field',
-			'ID' => 'text_field',
-			'atts' => array(
-				'title' => 'You can add custom atts here, as many as you want!',
-			),
+			'name' => 'Custom Text For Left Side Of Footer',
+			'ID' => 'cf_left_footer'
 		),
-		'checkbox' => array(
-			'name' => 'Checkbox Field',
-			'ID' => 'checkbox_field',
-		),
-		'textarea' => array(
-			'name' => 'Text Area Field',
-			'ID' => 'textarea_field',
-			'atts' => array(
-				'class' => 'you-can-even-add-classes separated-by-spaces',
-			),
-		),
-		'select' => array(
-			'name' => 'Select Box Field',
-			'ID' => 'select_field',
-			'options' => array(
-				'Option 1' => 'option_1',
-				'Option 2' => 'option_2',
-				'Option 3' => 'option_3',
-			),
-		),
+		'text' => array(
+			'name' => 'Custom Text For Right Side Of Footer',
+			'ID' => 'cf_right_footer'
+		)
 	);
 
 	/**
@@ -82,8 +61,8 @@ class MyCDExtension_Settings extends ClientDash_Settings_API {
 	function __construct() {
 
 		// Transfer ID over to this class
-		// Change me! Change "MyCDExtension" to whatever you've renamed your class to.
-		self::$ID = MyCDExtension::$ID;
+		// Change me! Change "MlwCustomFooter" to whatever you've renamed your class to.
+		self::$ID = MlwCustomFooter::$ID;
 
 		// Set the ID
 		$this->_settings_ID = self::$ID . '_settings';
@@ -95,7 +74,7 @@ class MyCDExtension_Settings extends ClientDash_Settings_API {
 		$this->add_content_section(
 			array(
 				'name'     => self::$section_name,
-				'tab'      => MyCDExtension::$settings_tab, // Change me too!
+				'tab'      => MlwCustomFooter::$settings_tab, // Change me too!
 				'page'     => 'Settings',
 				'callback' => array( $this, 'settings_output' )
 			)
@@ -120,7 +99,8 @@ class MyCDExtension_Settings extends ClientDash_Settings_API {
 		}
 
 		// Custom field example
-		self::register_field( 'cd_options_' . self::$ID, $this->_settings_ID, 'custom_text_field' );
+		self::register_field( 'cd_options_' . self::$ID, $this->_settings_ID, 'cf_left_footer' );
+		self::register_field( 'cd_options_' . self::$ID, $this->_settings_ID, 'cf_right_footer' );
 	}
 
 	/**
@@ -190,4 +170,4 @@ class MyCDExtension_Settings extends ClientDash_Settings_API {
 	}
 }
 
-new MyCDExtension_Settings();
+new MlwCustomFooter_Settings();
