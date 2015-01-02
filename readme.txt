@@ -14,6 +14,7 @@ Allows admins to customize the footer text and version text.
 Allows the admin to customize the "Thank you for creating with WordPress." footer text as well as the version text.
 
 = Requires Client Dash =
+This addon will create a new tab "Custom Footer" in the Client Dash settings.
 
 = Make Suggestions Or Contribute =
 Client Dash Custom Footer Add-On is on [GitHub](https://github.com/fpcorso/custom_footer_add_on/)!
@@ -43,7 +44,7 @@ Feel free to use the support forums for this plugin or from the [My Local Websto
 
 == Screenshots ==
 
-1. Example
+1. Editing Footer Text
 
 == Changelog ==
 
