@@ -5,7 +5,7 @@
  * Description: Enables the admin to customize the footer text
  * Author: Frank Corso
  * Author URI: http://mylocalwebstop.com
- * Version: 0.1.0
+ * Version: 0.1.1
  *
  * Disclaimer of Warranties
  * The plugin is provided "as is". My Local Webstop and its suppliers and licensors hereby disclaim all warranties of any kind, 

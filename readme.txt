@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: footer, admin, text, version, client dash
 Requires at least: 3.8.1
 Tested up to: 4.1
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Allows admins to customize the footer text and version text.
@@ -47,6 +47,9 @@ Feel free to use the support forums for this plugin or from the [My Local Websto
 1. Editing Footer Text
 
 == Changelog ==
+
+= 0.1.1 (February 14, 2015) =
+ * Fixed Syntax Bug For Users <PHP 5.4
 
 = 0.1.0 (December 31, 2014) =
 * Initial Version
